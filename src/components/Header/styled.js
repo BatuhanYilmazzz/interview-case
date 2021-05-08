@@ -6,3 +6,7 @@ export const StyledHeader = styled.div`
   padding-bottom: ${(props) => props.theme.gutters.small};
   text-align: center;
 `;
+
+export const StyledLogo = styled.img`
+  max-width: 140px;
+`;

@@ -1,8 +1,12 @@
 import React from 'react';
-import { StyledHeader } from './styled';
+import { StyledHeader, StyledLogo } from './styled';
 
 const Header = () => {
-  return <StyledHeader>Header</StyledHeader>;
+  return (
+    <StyledHeader>
+      <StyledLogo src="/images/logo.png" alt="" />
+    </StyledHeader>
+  );
 };
 
 export default Header;

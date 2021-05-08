@@ -2,16 +2,15 @@ import styled from 'styled-components';
 
 export const StyledProductItem = styled.div``;
 
-export const ProductItemHeader = styled.div`
-  background-color: ${(props) => props.theme.colors.gray};
-  min-width: 92px;
-  min-height: 92px;
+export const ProductItemHeader = styled.img`
+  max-width: 100%;
 `;
 
 export const ProductItemHeaderWrapper = styled.div`
   border: 1px solid ${(props) => props.theme.colors.borderColor};
   padding: ${(props) => props.theme.gutters.smallBig};
   border-radius: ${(props) => props.theme.gutters.regular};
+  text-align: center;
 `;
 
 export const StyledPrice = styled.div`

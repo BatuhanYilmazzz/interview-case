@@ -6,7 +6,7 @@ import HomePage from 'pages/Homepage';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 
-import { theme, GlobalStyle } from 'theme/index';
+import { theme, GlobalStyle } from 'theme';
 
 function App() {
   return (

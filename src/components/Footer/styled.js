@@ -6,7 +6,7 @@ export const StyledFooter = styled.div`
   text-align: center;
   padding-top: ${(props) => props.theme.gutters.big};
   padding-bottom: ${(props) => props.theme.gutters.big};
-  background-color: ${(props) => props.theme.colors.lightGray};
+  margin-top: ${(props) => props.theme.gutters.largest};
   span {
     margin-right: ${(props) => props.theme.gutters.small};
   }
