@@ -1,10 +1,19 @@
 import React from 'react';
-import { StyledHeader, StyledLogo } from './styled';
-
+import { StyledHeader, StyledLogo, StyledHeaderTotalPrice, StyledHeaderWrapper } from './styled';
+import { useSelector } from 'react-redux';
+import { sumTotalPrice } from 'utils';
+import { Container } from 'theme';
 const Header = () => {
+  const { basket } = useSelector((state) => state?.storeData);
   return (
     <StyledHeader>
-      <StyledLogo src="/images/logo.png" alt="" />
+      <Container>
+        <StyledHeaderWrapper>
+          <StyledLogo src="/images/logo.png" alt="" />
+
+          <StyledHeaderTotalPrice> ₺ {sumTotalPrice(basket)}</StyledHeaderTotalPrice>
+        </StyledHeaderWrapper>
+      </Container>
     </StyledHeader>
   );
 };

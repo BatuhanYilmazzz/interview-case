@@ -9,23 +9,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
 const Tags = () => {
-  const { productsData } = useSelector((state) => state?.storeData);
+  const { tagsState } = useSelector((state) => state?.storeData);
 
   const [filter, setFilter] = useState('');
-
-  const sortTags = () => {
-    let tags = [];
-    productsData.forEach((item) => {
-      item.tags.forEach((i) => {
-        tags.push(i);
-      });
-    });
-
-    // eslint-disable-next-line no-undef
-    const newTags = Array.from(new Set(tags));
-
-    return newTags;
-  };
 
   return (
     <Fragment>
@@ -44,8 +30,8 @@ const Tags = () => {
             label="All"
           />
           <FormGroup>
-            {sortTags() &&
-              sortTags()
+            {tagsState &&
+              tagsState
                 .filter((item) => item.toLowerCase().includes(filter.toLowerCase()))
                 .map((item, index) => (
                   <FormControlLabel

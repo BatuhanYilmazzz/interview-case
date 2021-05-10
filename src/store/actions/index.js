@@ -43,3 +43,29 @@ export const setTotalPages = (data) => {
     payload: data
   };
 };
+
+export const setTageState = () => {
+  return {
+    type: actionTypes.SET_TAG_STATE
+  };
+};
+
+export const setTageStateFail = (error) => {
+  return {
+    type: actionTypes.SET_TAG_STATE_FAIL,
+    payload: error
+  };
+};
+export const setTageStateSuccess = (data) => {
+  return {
+    type: actionTypes.SET_TAG_STATE_SUCCESS,
+    payload: data
+  };
+};
+
+export const addItemBasket = (data) => {
+  return {
+    type: actionTypes.ADD_ITEM_BASKET,
+    payload: data
+  };
+};

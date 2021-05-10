@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const theme = {
   colors: {
     primary: '#1EA4CE',
-    primaryDark: '$147594',
+    primaryDark: '#147594',
     secondary: '#191919',
     white: '#fff',
     black: '#000',
@@ -80,10 +80,32 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   max-width: 1230px;
   margin: auto;
+  padding: ${(props) => props.theme.gutters.small};
 `;
 
 export const Title = styled.div`
   margin-bottom: ${(props) => props.theme.gutters.small};
   font-size: ${(props) => props.theme.fontSizes.small};
   color: ${(props) => props.theme.colors.textColor};
+  color: ${(props) => props.color};
+`;
+
+export const CircularProgressWrapper = styled.div`
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
+
+export const StyledPrice = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  font-weight: bold;
+  font-size: ${(props) => props.theme.fontSizes.regular};
+  margin: ${(props) => props.theme.gutters.small} 0;
+  font-weight: ${(props) => props.fontWeight};
 `;

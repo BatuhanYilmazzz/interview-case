@@ -18,6 +18,7 @@ const Products = () => {
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
+    window.scroll(0, 0);
   };
 
   return (
@@ -25,21 +26,20 @@ const Products = () => {
       <StyledProducts>
         <Grid container spacing={2}>
           {productsData &&
-            productsData
-              .slice(pagesVisited, pagesVisited + productsPerPage)
-              .map(({ price, name }, index) => (
-                <Grid lg={3} item key={index} xs={6} sm={4}>
-                  <motion.div
-                    key={pageNumber}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.2 }}>
-                    <ProductItem price={price} name={name} />
-                  </motion.div>
-                </Grid>
-              ))}
+            productsData.slice(pagesVisited, pagesVisited + productsPerPage).map((item, index) => (
+              <Grid lg={3} item key={index} xs={6} sm={4}>
+                <motion.div
+                  key={pageNumber}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}>
+                  <ProductItem item={item} />
+                </motion.div>
+              </Grid>
+            ))}
         </Grid>
       </StyledProducts>
+
       <ReactPaginateWrapper>
         <ReactPaginate
           previousLabel={'Prev'}

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const StyledProductItem = styled.div``;
+export const StyledProductItem = styled.div`
+  margin-bottom: ${(props) => props.theme.gutters.small};
+`;
 
 export const ProductItemHeader = styled.img`
   max-width: 100%;
@@ -11,13 +13,6 @@ export const ProductItemHeaderWrapper = styled.div`
   padding: ${(props) => props.theme.gutters.smallBig};
   border-radius: ${(props) => props.theme.gutters.regular};
   text-align: center;
-`;
-
-export const StyledPrice = styled.div`
-  color: ${(props) => props.theme.colors.primary};
-  font-weight: bold;
-  font-size: ${(props) => props.theme.fontSizes.regular};
-  margin: ${(props) => props.theme.gutters.small} 0;
 `;
 
 export const StyledItemName = styled.div`
@@ -37,4 +32,5 @@ export const StyledButton = styled.button`
   border: 1px solid ${(props) => props.theme.colors.primary};
   width: 100%;
   padding: ${(props) => props.theme.radius.small};
+  cursor: pointer;
 `;

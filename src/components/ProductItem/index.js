@@ -4,20 +4,23 @@ import {
   StyledProductItem,
   ProductItemHeaderWrapper,
   ProductItemHeader,
-  StyledPrice,
   StyledItemName,
   StyledButton
 } from './styled';
+import { StyledPrice } from 'theme';
+import { useDispatch } from 'react-redux';
+import { addItemBasket } from 'store/actions';
 
-const ProductItem = ({ price, name }) => {
+const ProductItem = ({ item }) => {
+  const dispatch = useDispatch();
   return (
     <StyledProductItem>
       <ProductItemHeaderWrapper>
         <ProductItemHeader src="/images/productitem.png" />
       </ProductItemHeaderWrapper>
-      <StyledPrice> &#8378; {priceNormalize(price)}</StyledPrice>
-      <StyledItemName>{name}</StyledItemName>
-      <StyledButton>Add</StyledButton>
+      <StyledPrice> &#8378; {priceNormalize(item.price)}</StyledPrice>
+      <StyledItemName>{item.name}</StyledItemName>
+      <StyledButton onClick={() => dispatch(addItemBasket(item))}>Add</StyledButton>
     </StyledProductItem>
   );
 };
