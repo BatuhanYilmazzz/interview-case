@@ -20,11 +20,44 @@ The full project requirements can be found below.
 
 - Html5
 - Styled Components
-- React Bootstrap
+- Material UI
 - React Hooks
-- Redux / Redux-Saga
-- Docker
-- 
+- Styled Components
+- Json Server
+
+## Folder Structure
+
+components => App shared components <br/>
+services => endpoints and apisü<br/>
+store => global stores (Context API)<br/>
+theme => style customization, styled component config.<br/>
+utils => helper functions<br/>
+pages => main part of app <br/>
+
+### Components
+
+Components are the main tiny part of pages.You can find unique Components.Every component has also its own styledjs file.
+
+### Theming
+
+You can create and theme object and thanks to styled component ThemeProvider , we can use as prop in components.
+
+```
+ padding: ${(props) => props.theme.gutters.smallBig};
+
+```
+
+### Store
+
+React Context Api is used for state management. Also for more stability immer is adapted to reducer.
+
+### Services
+
+Services are composed of two main part api which is used to create instance and endpoints.
+
+### Utils
+
+Utilities helper functions and methods can be defined in this folder.
 
 ## Usage
 
@@ -33,6 +66,7 @@ The full project requirements can be found below.
 ```sh
 $ --https://github.com/BatuhanYilmazzz/interview-case.git
 ```
+
 > cd into the directory, install dependencies, build and start
 
 ```sh
@@ -43,10 +77,9 @@ $ npm run start
 ```
 
 > Open `http://127.0.0.1:3000` using your favourite broswer, if it doesn't open automatically.
-and npm run start.
+> and npm run start.
 
 ### ✨ [Live Demo](https://)
-
 
 ## Author
 
@@ -69,7 +102,6 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
 
 - Github: [@BatuhanYilmazzz](https://github.com/BatuhanYilmazzz)
 - Twitter: [@BatuhanYilmaz](https://twitter.com/batuhnnylmazz)
