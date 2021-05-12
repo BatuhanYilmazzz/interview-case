@@ -27,12 +27,16 @@ The full project requirements can be found below.
 
 ## Folder Structure
 
+App --
 components => App shared components <br/>
 services => endpoints and apisü<br/>
 store => global stores (Context API)<br/>
 theme => style customization, styled component config.<br/>
 utils => helper functions<br/>
 pages => main part of app <br/>
+
+Server--
+server=> backend for storing data
 
 ### Components
 
