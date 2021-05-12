@@ -71,15 +71,16 @@ $ --https://github.com/BatuhanYilmazzz/interview-case.git
 
 ```sh
 $ cd interview-case
-$ npm install
-$ npm run build
-$ npm run start
+$ yarn
+$ yarn start
+
+$ cd server
+$ yarn
+$ yarn start
+
 ```
-
-> Open `http://127.0.0.1:3000` using your favourite broswer, if it doesn't open automatically.
-> and npm run start.
-
-### ✨ [Live Demo](https://)
+> Open `http://127.0.0.1:4000` using your favourite broswer, if it doesn't open automatically.
+> and yarn start.
 
 ## Author
 
