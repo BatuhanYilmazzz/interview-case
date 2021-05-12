@@ -79,7 +79,7 @@ $ yarn
 $ yarn start
 
 ```
-> Open `http://127.0.0.1:4000` using your favourite broswer, if it doesn't open automatically.
+> Open `http://127.0.0.1:5000` using your favourite broswer, if it doesn't open automatically.
 > and yarn start.
 
 ## Author
