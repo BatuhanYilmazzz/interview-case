@@ -88,7 +88,8 @@ $ yarn start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/BatuhanYilmazzz/NetflixReact/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/BatuhanYilmazzz/interview-case
+/issues).
 
 1. Fork it (https://github.com/BatuhanYilmazzz/interview-case.git/fork)
 2. Create your working branch (git checkout -b [choose-a-name])
